@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp"
-           fetch=".." />
+ <remote  name="aosp"
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+           
+  <remote  name="gh"
+           fetch="git://github.com/"
+           revision="refs/tags/android-4.0.2_r1" />
+
   <default revision="refs/tags/android-4.0.2_r1"
            remote="aosp"
            sync-j="4" />
+          
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />
